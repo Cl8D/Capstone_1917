@@ -56,3 +56,13 @@
   font-family: "nanum-bold";
   src: url("./font/NanumBarunGothicBold.ttf");
 }
+
+@font-face {
+  font-family: "chunkfive1";
+  src: url("./font/Chunk Five Print.otf");
+}
+
+@font-face {
+  font-family: "chunkfive2";
+  src: url("./font/ChunkFive-Regular.otf");
+}
