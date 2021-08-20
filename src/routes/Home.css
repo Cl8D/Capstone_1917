@@ -18,7 +18,7 @@
     margin : auto;
 }
 
-button{
+.login_button{
     font-family: "nanum";
     display:block;
     

@@ -1,12 +1,11 @@
 //import logo from './logo.svg';
 import './App.css'
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./routes/Home";
-import Result from "./routes/Result";
 import Loading from "./routes/Loading";
-import Navigation from "./Component/Navigation";
 import Oauth2 from "./routes/Oauth2";
 import VideoList from "./routes/Video_list";
+import CommentList from './routes/Comment';
 
 
 //import {react, useEffect, useState} from "react";
@@ -21,10 +20,43 @@ function App() {
   
   return (
     <BrowserRouter>
-      <Route path="/" exact={true} component={Home} />
-      <Route path="/oauth2callback"  component={Oauth2} />
-      <Route path="/list" exact={true} component={VideoList} />
-      <Route path="/Loading" exact={true} component={Loading} />
+      <Switch>
+        <Route 
+            path="/" 
+            exact={true} 
+            component={(props) => {
+              return <Home {...props}></Home>;
+            }} 
+        />
+        <Route 
+            path="/oauth2callback"
+            exact={true} 
+            component={(props) => {
+                return <Oauth2 {...props}></Oauth2>;
+            }}
+        />
+        <Route 
+            path="/list" 
+            exact={true} 
+            component={(props) => {
+              return <VideoList {...props}></VideoList>;
+            }} 
+          />
+        <Route 
+            path="/Loading" 
+            exact={true} 
+            component={(props) => {
+              return <Loading {...props}></Loading>;
+             }}
+          />
+        <Route 
+            path="/list/:videoId" 
+            exact={true} 
+            component={(props) => {
+              return <CommentList {...props}></CommentList>;
+              }} 
+        />
+      </Switch>
   </BrowserRouter>
   );
 }

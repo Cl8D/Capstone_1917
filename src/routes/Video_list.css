@@ -1,0 +1,27 @@
+.header2{
+    background-image: url("https://cdn.discordapp.com/attachments/874658668434583658/878258104893071420/80f517ce5c3e650a.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.first_logo{
+    margin: auto;
+    font-family: "chunkfive2";
+    text-align: center;
+    font-size: 50px;
+    padding-top: 30px;
+}
+
+
+.first_mes{
+    font-family: "nanum";
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+    padding-top : 10px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}

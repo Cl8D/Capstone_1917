@@ -1,0 +1,36 @@
+table{
+    width: 60%;
+    height: 100px;
+    margin: auto;
+    margin-top : 35px;
+    border-spacing: 30px 15px;
+    background-color : #eeeeee;
+    border-radius: 70px;
+}
+
+
+.video_list{
+    margin-top : 150px;
+    margin: auto;
+}
+
+.title_list{
+    font-family: "nanum";
+    font-weight: bold;
+    font-size : 23px;
+    margin: auto;
+    text-align: center;
+    color: #000;
+}
+
+
+
+.des_list {
+    font-family: "nanum";
+    margin: auto;
+    font-size : 15px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #555555;
+}
+

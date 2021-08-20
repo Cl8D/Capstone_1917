@@ -1,0 +1,29 @@
+.table2{
+    width: 60%;
+    height: 50px;
+    margin: auto;
+    background-color : #eeeeee;
+    border-radius: 70px;
+}
+
+
+.comment_list{
+    margin-top : 150px;
+    margin: auto;
+}
+
+.comment{
+    font-family: "nanum";
+    font-weight: bold;
+    font-size : 20px;
+    margin: auto;
+    text-align: center;
+}
+
+.check_box{
+    display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #ffffff;
+	cursor: pointer;
+}

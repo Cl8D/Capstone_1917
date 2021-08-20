@@ -65,7 +65,7 @@ class Home extends React.Component {
 
     return (
       <div className="header"> 
-          <button onClick = {appClick}>▶</button>
+          <button className = "login_button" onClick = {appClick}>▶</button>
           <div className = "login"> LOGIN <br></br> TO <br></br> YOUTUBE</div> 
           <div className = "warning_message">지나친 악용은 권장하지 않습니다.</div>
         </div>
