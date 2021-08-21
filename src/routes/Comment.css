@@ -35,19 +35,22 @@
     font-weight: bold;
 }
 
+.wrapper {
+    position: relative;
+    padding-bottom: 30px;
+}
 
 .delete_comment{
     font-family: "nanum";
     display: block;
     
     width: 5%;
-    height: 7%;
+    height: 60px;
     font-size: 15px;
     line-height: 1.5%;
-    position: absolute;
     left: 50%;
-    transform: translate(-50%, 35%);
-
+    position: absolute;
+    transform: translate(-50%);
 
     font-weight: bold;
     border-width: 5px;

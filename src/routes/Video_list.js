@@ -15,9 +15,9 @@ const VideoList = (props) => {
     )
     
     
-    useEffect(() => {
+    useEffect(() => { 
         axios
-        .get("http://hoduback.space/api/v1/pryt/list?page=3", {
+        .get("http://localhost/api/v1/pryt/list", {
           headers: {
             Authorization: localStorage.getItem("Token"),
           },
@@ -26,9 +26,7 @@ const VideoList = (props) => {
             console.log(res.data);
             setVideoList(res.data);     // 백으로 데이터 받기
             //console.log('ID : ' + videoList[0].videoId);
-
             setIsLoaded(true);
-            
         })
         .catch((err) => {
             setIsLoaded(true);
