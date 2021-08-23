@@ -1,29 +1,42 @@
-.table2{
-    width: 60%;
-    height: 50px;
-    margin: auto;
-    background-color : #eeeeee;
-    border-radius: 70px;
-}
 
-
-.comment_list{
-    margin-top : 150px;
+.all_check{
+    font-family: "nanum";
+    font-weight: bold;
+    font-size : 18px;
     margin: auto;
 }
+
+thead {
+    font-size: 20px;
+    color: #616060;
+    text-align: center;
+}
+
 
 .comment{
     font-family: "nanum";
     font-weight: bold;
-    font-size : 20px;
+    font-size : 17px;
     margin: auto;
+    vertical-align: auto;
     text-align: center;
 }
 
 .check_box{
-    display: inline-block;
+    margin: auto;
 	width: 20px;
 	height: 20px;
 	border: 2px solid #ffffff;
 	cursor: pointer;
+}
+
+.comment_acc{
+    font-weight: bold;
+    font-size : 15px;
+    text-align: center;
+}
+
+.comment_check{
+    text-align: center;
+    margin: auto; 
 }

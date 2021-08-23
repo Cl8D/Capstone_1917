@@ -44,6 +44,11 @@
     float: left;
 }
 
+.login_button:active{
+    transition: .5s;
+    background: #000;
+}
+
 .login{
     float: left;
     font-family: "nanum";

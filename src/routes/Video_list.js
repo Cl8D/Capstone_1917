@@ -3,6 +3,7 @@ import axios from 'axios';
 import VideoTable from '../Component/ListTable';
 import './Video_list.css';
 
+
 const VideoList = (props) => {
     const [videoList, setVideoList] = useState([{description : "", videoId : "", videoTitle : ""}]);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -17,7 +18,7 @@ const VideoList = (props) => {
     
     useEffect(() => { 
         axios
-        .get("http://localhost/api/v1/pryt/list", {
+        .get("http://hoduback.space/api/v1/pryt/list", {
           headers: {
             Authorization: localStorage.getItem("Token"),
           },
@@ -34,6 +35,10 @@ const VideoList = (props) => {
     
     },[isLoaded]);
     
+    const goHome = () => {
+        props.history.push("/");
+    }
+  
 
     if (isLoaded){  //로딩 완료
         return (
@@ -42,6 +47,7 @@ const VideoList = (props) => {
                 <div className= "first_mes"> 제목을 클릭해 나쁜 댓글들을 확인해 보세요! 😎</div>
                 <hr className = "line" size="1" width="70%" align="center"></hr>
                 <VideoTable videoList={videoList} />
+                <button className="go_home" onClick = {goHome}>🏡</button>
             </div>
         )
     }

@@ -36,20 +36,14 @@ class Home extends React.Component {
   }
 
   appClick = () => {
-    //console.log('제목: ${this.state.title}\n 구독자수: ${this.state.subscriber}');
-    //console.log('제목: %s\n 구독자수: %s', this.state.title, this.state.subscriber);
-    
-    
-    // window.open("https://accounts.google.com/o/oauth2/auth?client_id=835265111570-3bmt0epqvso70r1jms19hljlegmuce5j.apps.googleusercontent.com&redirect_uri=" + SERVER_URL + "&scope=https://www.googleapis.com/auth/youtube&response_type=code&access_type=offline", "_blank")
-    
-    // this.props.history.push("https://accounts.google.com/o/oauth2/auth?client_id=835265111570-3bmt0epqvso70r1jms19hljlegmuce5j.apps.googleusercontent.com&redirect_uri=" + SERVER_URL + "&scope=https://www.googleapis.com/auth/youtube&response_type=code&access_type=offline"
-    window.location.href =
-    "https://accounts.google.com/o/oauth2/auth?client_id=812957670514-e7arbd2p80s7f7ln233da9r716934u5h.apps.googleusercontent.com&redirect_uri=" +
-    "http://localhost:3000/oauth2callback" +
-    "&scope=https://www.googleapis.com/auth/youtube&response_type=code&access_type=offline";
+
+    // window.location.href =
+    // "https://accounts.google.com/o/oauth2/auth?client_id=812957670514-e7arbd2p80s7f7ln233da9r716934u5h.apps.googleusercontent.com&redirect_uri=" +
+    // "http://localhost:3000/oauth2callback" +
+    // "&scope=https://www.googleapis.com/auth/youtube.force-ssl&response_type=code&access_type=offline";
 
   
-    // this.props.history.push("/list");
+    this.props.history.push("/list");
   }
 
   appKeyPress = (e) => {

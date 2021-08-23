@@ -2,9 +2,9 @@
     background-image: url("https://cdn.discordapp.com/attachments/874658668434583658/878258104893071420/80f517ce5c3e650a.png");
     background-repeat: no-repeat;
     -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .first_logo{
@@ -25,3 +25,29 @@
     margin-bottom: 40px;
     font-weight: bold;
 }
+
+
+  .go_home {
+    text-align: center;
+    background-color: #F44336;
+    top: 85%;
+    left: 94%;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background: #F44336;
+    z-index: 2;
+    position: fixed;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: 20px;
+    transition: .3s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 5px 10px rgba(0, 0, 0, 0.23);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  .go_home:active {
+    box-shadow: 2px 2px 0 rgb(0,0,0,0.5); 
+    background: #ff847b;
+  }
