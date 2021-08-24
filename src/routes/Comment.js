@@ -19,18 +19,17 @@ const CommentList = (props) => {
     }
 
     useEffect(() => {
-        // axios
-        // .get("http://hoduback.space/api/v1/pryt/comments/" + props.match.params.videoId, {
-        //   headers: {
-        //     Authorization: localStorage.getItem("Token"),
-        //   },
-        // })
-        // .then((res) => {
-        //     console.log(res.data);
-        //     setCommentList(res.data);     // 백으로 데이터 받기
-        //     if(res.data.length === 0){
-        //               Swal.fire({
-                        /*
+        axios
+        .get("http://hoduback.space/api/v1/pryt/comments/" + props.match.params.videoId, {
+          headers: {
+            Authorization: localStorage.getItem("Token"),
+          },
+        })
+        .then((res) => {
+            console.log(res.data);
+            setCommentList(res.data);     // 백으로 데이터 받기
+            if(res.data.length === 0){
+                      Swal.fire({
                         title: '✋',
                         text: '나쁜 댓글이 없어요!',
                         icon: 'warning',
@@ -43,49 +42,6 @@ const CommentList = (props) => {
                             toast.addEventListener('mouseleave', Swal.resumeTimer)
                         }
                     })
-                    */
-        //         props.history.push("/list");
-        //     }
-        //     setIsLoaded(true);
-            
-        // })
-        // .catch((err) => {
-        //     setIsLoaded(true);
-        // });
-
-        axios
-        .post("http://hoduback.space/api/v1/pryt/comments/test",         [
-            {
-                "commentID" : "Ugygzf08iyeRKU9yc9N4AaABAg",
-                "comment" : "정말별로에요"
-            },
-            {
-                "commentID" : "AAygzf08iyeRKU9yc9N4AaABAg",
-                "comment" : "정말 나쁜 동영상입니다"
-            }
-        ],{
-          headers: {
-            Authorization: localStorage.getItem("Token"),
-          },
-        }
-        )
-        .then((res) => {
-            console.log(res.data);
-            setCommentList(res.data);     // 백으로 데이터 받기
-            if(res.data.length === 0){
-                Swal.fire({
-                    title: '👍',
-                    text: '나쁜 댓글이 없어요!',
-                    icon: 'warning',
-                    confirmButtonText: '❤',
-                    confirmButtonColor : '#fa7579',
-                    timer: 3000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                      }
-                  })
                 props.history.push("/list");
             }
             setIsLoaded(true);
@@ -94,9 +50,52 @@ const CommentList = (props) => {
         .catch((err) => {
             setIsLoaded(true);
         });
+    },[isLoaded]);
+
+    //     axios
+    //     .post("http://hoduback.space/api/v1/pryt/comments/test",         [
+    //         {
+    //             "commentID" : "Ugygzf08iyeRKU9yc9N4AaABAg",
+    //             "comment" : "정말별로에요"
+    //         },
+    //         {
+    //             "commentID" : "AAygzf08iyeRKU9yc9N4AaABAg",
+    //             "comment" : "정말 나쁜 동영상입니다"
+    //         }
+    //     ],{
+    //       headers: {
+    //         Authorization: localStorage.getItem("Token"),
+    //       },
+    //     }
+    //     )
+    //     .then((res) => {
+    //         console.log(res.data);
+    //         setCommentList(res.data);     // 백으로 데이터 받기
+    //         if(res.data.length === 0){
+    //             Swal.fire({
+    //                 title: '👍',
+    //                 text: '나쁜 댓글이 없어요!',
+    //                 icon: 'warning',
+    //                 confirmButtonText: '❤',
+    //                 confirmButtonColor : '#fa7579',
+    //                 timer: 3000,
+    //                 timerProgressBar: true,
+    //                 didOpen: (toast) => {
+    //                     toast.addEventListener('mouseenter', Swal.stopTimer)
+    //                     toast.addEventListener('mouseleave', Swal.resumeTimer)
+    //                   }
+    //               })
+    //             props.history.push("/list");
+    //         }
+    //         setIsLoaded(true);
+            
+    //     })
+    //     .catch((err) => {
+    //         setIsLoaded(true);
+    //     });
         
     
-    },[isLoaded]);
+    // },[isLoaded]);
     
     
     const deleteComment = () => {
